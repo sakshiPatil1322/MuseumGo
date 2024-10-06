@@ -1,0 +1,104 @@
+Routes for Regular Users
+Home Page:
+
+Route: /
+Description: Displays information about the museum, available exhibits, and events.
+Exhibit List and Details:
+
+Route: /exhibits
+Description: Shows a list of available exhibits with options to view details of each exhibit.
+Ticket Booking:
+
+Route: /book-tickets
+Description: Allows users to select tickets (type, quantity, date, and time) and proceed with the booking.
+Payment Processing:
+
+Route: /payment
+Description: Handles secure payment processing for ticket purchases.
+User Profile and Booking History:
+
+Route: /profile
+Description: Displays user profile details and booking history, with options to edit profile or cancel bookings.
+Login and Signup:
+
+Route: /login, /signup
+Description: Allows users to create an account or log in to access booking and profile features.
+Contact Us and Support:
+
+Route: /contact
+Description: Provides a form for users to reach out to museum staff for support or inquiries.
+Logout:
+
+Route: /logout
+Description: Logs out the user and ends their session.
+Routes for Admins
+
+
+Admin Dashboard:
+
+Route: /admin/dashboard
+Description: Overview of all site activities, including ticket sales, visitor stats, and recent bookings.
+Manage Exhibits:
+
+Route: /admin/exhibits
+Description: Allows admins to add, edit, or delete exhibits, update descriptions, images, and availability.
+Manage Tickets and Bookings:
+
+Route: /admin/bookings
+Description: View and manage all bookings, including the ability to approve, modify, or cancel bookings.
+User Management:
+
+
+Route: /admin/login
+Description: Specific login page for admin users.
+Admin Logout:
+
+Route: /admin/logout
+Description: Logs out the admin user and ends their session.
+
+*********************Route: /admin/users
+Description: Manage registered users, including viewing profiles, resetting passwords, or blocking accounts.
+Reports and Analytics:************************
+
+*******************Route: /admin/reports
+Description: Generate reports on ticket sales, revenue, visitor demographics, etc.
+Manage Content (Events, Notices, etc.):*******************
+
+********************Route: /admin/content
+Description: Allows admins to post news, events, or notices on the website.
+Admin Login:*****************
+
+
+
+Key Points for Implementation
+Role-Based Access Control: Ensure that admin routes are protected and only accessible by users with the admin role.
+Separate Navigation: Provide distinct navigation menus for users and admins, tailored to their needs.
+Unified Authentication: Use a common authentication mechanism but redirect users based on their roles after login.
+These routes will provide the essential functionalities required for both user types, ensuring a smooth user experience and effective management of the museum's online presence.
+
+
+    // const token = req.cookies.uid; 
+    // if (!token) {
+    //     return res.render('login');
+    // }
+
+    // const user = decodeToken(token); 
+
+    // if (!user) {
+    //     return res.render('login');
+    // }
+
+
+
+
+                                    <% if (event.evDate) { %>
+                                        <p><%= event.evDate %><p>
+                                    <% } %>
+
+
+
+
+// https server : ssh -R 80:localhost:9016 serveo.net
+
+
+//Muzee - A blend of "museum" and "zee", suggesting a guide
