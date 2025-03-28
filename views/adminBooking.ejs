@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,7 +37,8 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -46,7 +49,8 @@
         <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.ejs" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="index.ejs"
+                        class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary text-uppercase">MuseumGo</h1>
                     </a>
                 </div>
@@ -76,10 +80,12 @@
                         <a href="index.ejs" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary text-uppercase">MuseumGo</h1>
                         </a>
-                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-between custom-margin head-cls" id="navbarCollapse">
+                        <div class="collapse navbar-collapse justify-content-between custom-margin head-cls"
+                            id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0 mearg">
                                 <a href="adminDashboard" class="nav-item nav-link active">Home</a>
                                 <a href="adminWebHandle" class="nav-item nav-link">MuseumGo</a>
@@ -87,16 +93,19 @@
                                 <a href="adminExhibits" class="nav-item nav-link">Staff</a>
                                 <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft custom-btn">Login</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Signup</a> -->
-                                <a href="/logout" class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Logout</a>
+                                <a href="/logout"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Logout</a>
                             </div>
-                        </div>        
+                        </div>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Header End -->
         <div class="sec-nav">
-            <p><%= user.email %></p>
+            <p>
+                <%= user.email %>
+            </p>
         </div>
 
         <!-- Page Header Start -->
@@ -126,16 +135,20 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/booking2.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s"
+                                    src="img/booking2.jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/booking.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
+                                    src="img/booking.jpg">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/booking3.webp">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s"
+                                    src="img/booking3.webp">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/booking7.webp">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s"
+                                    src="img/booking7.webp">
                             </div>
                         </div>
                     </div>
@@ -145,37 +158,44 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" name="evName" class="form-control" id="evName" placeholder="Event Name">
+                                            <input type="text" name="evName" class="form-control" id="evName"
+                                                placeholder="Event Name">
                                             <label for="evName">Event Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="number" name="ppp" class="form-control" id="price" placeholder="Price">
+                                            <input type="number" name="ppp" class="form-control" id="price"
+                                                placeholder="Price">
                                             <label for="price">Price</label>
                                         </div>
                                     </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" name="aSeat" class="form-control" id="price" placeholder="Price">
-                                        <label for="price">Available Seats</label>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="aSeat" class="form-control" id="price"
+                                                placeholder="Price">
+                                            <label for="price">Available Seats</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="date" class="form-control datetimepicker-input" id="checkin" name="evDate" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" required>
-                                        <label for="checkin">Date of Event</label>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" id="checkin"
+                                                name="evDate" placeholder="Check In" data-target="#date3"
+                                                data-toggle="datetimepicker" required>
+                                            <label for="checkin">Date of Event</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" name="smallInfo" class="form-control" id="smallInfo" placeholder="Little Information">
-                                        <label for="smallInfo">Little Information</label>
-                                    </div>
-                                </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" name="description" placeholder="Description" id="description" style="height: 100px"></textarea>
+                                            <input type="text" name="smallInfo" class="form-control" id="smallInfo"
+                                                placeholder="Little Information">
+                                            <label for="smallInfo">Little Information</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" name="description" placeholder="Description"
+                                                id="description" style="height: 100px"></textarea>
                                             <label for="description">Description</label>
                                         </div>
                                     </div>
@@ -185,13 +205,13 @@
                                             <p>Drag & Drop Images Here or Click to Upload</p>
                                             <input type="file" id="imageUpload" name="image">
                                         </div>
-                                    </div>    
+                                    </div>
                                     <div class="col-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">Add Event</button>
                                     </div>
                                 </div>
                             </form>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -200,81 +220,24 @@
         <!-- Booking End -->
 
 
-        <!-- Newsletter Start -->
-        <form action="/news" method="post">
-            <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 border rounded p-1">
-                        <div class="border rounded text-center p-1">
-                            <div class="bg-white rounded text-center p-5">
-                                <h4 class="mb-4">Mail For <span class="text-primary text-uppercase">Technical Issue</span></h4>
-                                <div class="position-relative mx-auto" style="max-width: 400px;">
-                                    <input class="form-control w-100 py-3 ps-4 pe-5" name="email" type="text" placeholder="Enter your email">
-                                    <button type="submit" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </form>        
-        <!-- Newsletter Start -->
-        
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container pb-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="bg-primary rounded p-4">
-                            <a href="adminDashboard"><h1 class="text-white text-uppercase mb-3">MuseumGo</h1></a>
-                            <p class="text-white mb-0">
-								Use <a class="text-dark fw-medium" href="#">MuseumGo – Seamless Ticket Booking</a>, book you holiday plan NOW !!
-							</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, delhi, India</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>museungo@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-12">
-                        <div class="row gy-5 g-4">
-                            <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Move to</h6>
-                                <a class="btn btn-link" href="adminDashboard">Home</a>
-                                <a class="btn btn-link" href="adminWebHandle">MuseumGo</a>
-                            </div>                            
-                            <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Move to</h6>
-                                <a class="btn btn-link" href="adminBooking">Add</a>
-                                <a class="btn btn-link" href="adminExhibits">Handle</a>
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container-fluid bg-dark text-light wow fadeIn" data-wow-delay="0.1s" style="height: 150px; align-items: center; justify-content: center; display: flex; flex-direction: column;">
+
             <div class="container">
                 <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">museumGo</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="">Sakshi Patil</a>
+                    <div class="row" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <div class="col-md-6 text-center mb-3 mb-md-0" style="margin-top: 25px;">
+                            &copy; <a  href="#">museumGo</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a href="">Sakshi Patil</a>
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
+                        <div class="col-md-6 text-center" style="margin-top: 25px;">
                             <div class="footer-menu">
-                                <a href="adminDashboard">Home</a>
-                                <a href="adminWebHandle">MuseumGo</a>
-                                <a href="adminBooking">Add</a>
+                                <a href="adminDashboard">Home</a> |
+                                <a href="adminWebHandle">MuseumGo</a> |
+                                <a href="adminBooking">Add</a> |
                                 <a href="adminExhibits">Handle</a>
                             </div>
                         </div>

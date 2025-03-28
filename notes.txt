@@ -102,3 +102,99 @@ These routes will provide the essential functionalities required for both user t
 
 
 //Muzee - A blend of "museum" and "zee", suggesting a guide
+
+
+
+
+//// cloudinary in event.js controller///////////////////////do changes from down
+
+const cloudinary = require('cloudinary').v2;
+const multer = require('multer');
+
+// Configure multer for memory storage
+const upload = multer({ storage: multer.memoryStorage() }).single('image');
+
+async function handleEvent(req, res) {
+  upload(req, res, async (err) => {
+    if (err) {
+      console.error('Upload error:', err);
+      return res.status(400).json({ error: err.message });
+    }
+
+    if (!req.file) {
+      return res.status(400).json({ error: 'An image is required.' });
+    }
+
+    const { evName, smallInfo, description, ppp, aSeat, evDate } = req.body;
+    const imageFile = req.file;
+
+    try {
+      // Upload image to Cloudinary
+      const cloudinaryResponse = await cloudinary.uploader.upload_stream(
+        { resource_type: 'image' },
+        async (error, result) => {
+          if (error) {
+            console.error('Cloudinary upload error:', error);
+            return res.status(500).json({ error: 'Failed to upload image to Cloudinary' });
+          }
+
+          // Create new event with Cloudinary URL for the image
+          const newEvent = new Event({
+            evName,
+            smallInfo,
+            description,
+            ppp,
+            aSeat,
+            image: {
+              url: result.secure_url, // Use Cloudinary's URL
+              public_id: result.public_id, // Store the public_id for later use (e.g., to delete)
+            },
+            evDate
+          });
+
+          await newEvent.save();
+          return res.redirect('adminDashboard');
+        }
+      );
+
+      imageFile.stream.pipe(cloudinaryResponse);
+    } catch (error) {
+      console.error('Error creating event:', error);
+      return res.status(400).json({ error: 'Failed to create event' });
+    }
+  });
+}
+
+module.exports = {
+  handleEvent,
+};
+
+
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+
+const cloudinary = require('cloudinary').v2;
+
+//////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

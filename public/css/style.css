@@ -598,7 +598,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: #9676d1;
+    background-color: #d0ecff;
     color: #FFFFFF;
 }
 
@@ -689,4 +689,40 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.margin-left{
+    margin-left: 270px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+tr{
+    color: black;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }

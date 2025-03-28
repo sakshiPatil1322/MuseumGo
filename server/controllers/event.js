@@ -4,6 +4,7 @@ const multer = require('multer');
 // Use memory storage to temporarily store the image
 const upload = multer({ storage: multer.memoryStorage() }).single('image');
 
+
 async function handleEvent(req, res) {
     // Call the upload middleware
     upload(req, res, async (err) => {

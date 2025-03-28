@@ -4,7 +4,7 @@ const secretKey = "jujutsu";
 
 
 function setUser(user){
-    return jwt.sign(user,secretKey,{expiresIn: '300s'});
+    return jwt.sign(user,secretKey,{expiresIn: '1500s'});
 }
 
 function getUser(token){

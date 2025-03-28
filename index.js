@@ -10,12 +10,13 @@ const staticRoutes = require('./server/routes/staticRouter');
 const userRoutes = require('./server/routes/user');
 const eventRoutes = require('./server/routes/event');
 const bookingRoutes = require('./server/routes/Booking');
-const logoutRoutes = require('./server/routes/userLogout'); // Import logout route
+const logoutRoutes = require('./server/routes/userLogout'); 
 const handleStaffRoutes = require('./server/routes/staff');
 const handleMailRoutes =require('./server/routes/mail');
 const newsHandler = require('./server/routes/newsLatter');
 const webhookRoutes = require('./server/routes/webhook');
 const handleFindUser = require('./server/routes/findUser');
+// const userDashboardRoute = require('./server/routes/userDashboard');
 
 const {mongoose} = require("mongoose");
 
@@ -55,9 +56,11 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json()); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 // app.use(expressLayouts);
 
 app.set('view engine', 'ejs');
@@ -72,5 +75,6 @@ app.use('/staff',handleStaffRoutes);
 app.use('/mail',handleMailRoutes);
 app.use('/news',newsHandler);
 app.use('/findUser',handleFindUser);
+// app.use('/dashboard',userDashboardRoute);
 
 app.listen(PORT,() => console.log(`Server is started on Port ${PORT}`))
