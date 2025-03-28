@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,12 +32,20 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script>
+        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "BxaQ99Pt1pI8y4cvH15J5"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
+
 </head>
+
+
 
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -46,7 +56,8 @@
         <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.ejs" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="index.ejs"
+                        class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary text-uppercase">MuseumGo</h1>
                     </a>
                 </div>
@@ -59,7 +70,8 @@
                         <a href="index.ejs" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary text-uppercase">MuseumGo</h1>
                         </a>
-                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-between custom-margin" id="navbarCollapse">
@@ -70,13 +82,16 @@
                                 <a href="service.ejs" class="nav-item nav-link">Services</a>
                                 <% if (cookies.uid) { %>
                                     <a href="/dashboard" class="nav-item nav-link">Dashboard</a>
-                                    <a href="/logout" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft custom-btn">Logout</a>
-                                <% } else { %>
-                                    <a href="/login" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft custom-btn">Login</a>
-                                    <a href="/signup" class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Signup</a>
-                                <% } %>    
+                                    <a href="/logout"
+                                        class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft custom-btn">Logout</a>
+                                    <% } else { %>
+                                        <a href="/login"
+                                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft custom-btn">Login</a>
+                                        <a href="/signup"
+                                            class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Signup</a>
+                                        <% } %>
                             </div>
-                        </div>        
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -92,9 +107,11 @@
                         <img class="w-100" src="img/carousel-1.jpg" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">MuseumGo</h6>
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">MuseumGo
+                                </h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Plan Your Museum Visit</h1>
-                                <a href="booking.ejs" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Booking</a>
+                                <a href="booking.ejs"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Booking</a>
                             </div>
                         </div>
                     </div>
@@ -102,9 +119,11 @@
                         <img class="w-100" src="img/bg2.jpg" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">MuseumGo</h6>
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">MuseumGo
+                                </h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Plan Your Museum Visit</h1>
-                                <a href="booking.ejs" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Booking</a>
+                                <a href="booking.ejs"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Booking</a>
                             </div>
                         </div>
                     </div>
@@ -131,13 +150,17 @@
                         <h6 class="section-title text-center text-primary text-uppercase margin-left">About Us</h6>
                         <!-- <h6 class="section-title text-start text-primary text-uppercase margin-left">About Us</h6> -->
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">MuseumGo</span></h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
+                            diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
+                            dolore erat amet</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up"><%= totalEvents %></h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">
+                                            <%= totalEvents %>
+                                        </h2>
                                         <p class="mb-0">Events</p>
                                     </div>
                                 </div>
@@ -146,7 +169,9 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up"><%= totalStaff %></h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">
+                                            <%= totalStaff %>
+                                        </h2>
                                         <p class="mb-0">Staffs</p>
                                     </div>
                                 </div>
@@ -155,7 +180,9 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up"><%= totalUsers %></h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">
+                                            <%= totalUsers %>
+                                        </h2>
                                         <p class="mb-0">Users</p>
                                     </div>
                                 </div>
@@ -165,16 +192,20 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/booking.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s"
+                                    src="img/booking.jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
+                                    src="img/about-2.jpg">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/booking2.jpg">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s"
+                                    src="img/booking2.jpg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/booking7.webp">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s"
+                                    src="img/booking7.webp">
                             </div>
                         </div>
                     </div>
@@ -186,77 +217,90 @@
 
         <!-- Room Start -->
         <!-- <div class="container-xxl py-5"> -->
-            <!-- <div class="container"> -->
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Events</h6>
-                    <h1 class="mb-5">Explore our upcoming <span class="text-primary text-uppercase">Events</span></h1>
-                </div>
+        <!-- <div class="container"> -->
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-primary text-uppercase">Our Events</h6>
+            <h1 class="mb-5">Explore our upcoming <span class="text-primary text-uppercase">Events</span></h1>
+        </div>
 
-                <div class="container">
-                    <% events.forEach((event, index) => { %>
-                        <% if (index % 3 === 0) { %>
-                            <% if (index !== 0) { %>
-                                </div> <!-- Close previous row -->
-                            <% } %>
-                            <div class="row g-4 mb-4"> <!-- Start a new row every 3 events with bottom margin -->
-                        <% } %>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="room-item shadow rounded overflow-hidden">
-                                <div class="position-relative card-img">
-                                    <% if (event.image) { %>
-                                        <img class="img-fluid" src="data:<%= event.image.contentType %>;base64,<%= event.image.data.toString('base64') %>" alt="">
+        <div class="container">
+            <% events.forEach((event, index)=> { %>
+                <% if (index % 3===0) { %>
+                    <% if (index !==0) { %>
+        </div> <!-- Close previous row -->
+        <% } %>
+            <div class="row g-4 mb-4"> <!-- Start a new row every 3 events with bottom margin -->
+                <% } %>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative card-img">
+                                <% if (event.image) { %>
+                                    <img class="img-fluid"
+                                        src="data:<%= event.image.contentType %>;base64,<%= event.image.data.toString('base64') %>"
+                                        alt="">
                                     <% } else { %>
                                         <img class="img-fluid" src="../img/booking.jpg" alt="Default Image">
-                                    <% } %>                
-                                    <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Rs<%= event.ppp %>/Person</small>
+                                        <% } %>
+                                            <small
+                                                class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Rs
+                                                <%= event.ppp %>/Person</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">
+                                        <%= event.evName %>
+                                    </h5>
                                 </div>
-                                <div class="p-4 mt-2">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0"><%= event.evName %></h5>
-                                    </div>
-                                    <p class="text-body mb-3"><%= event.smallInfo %></p>
-                                    <div class="d-flex justify-content-between para">
-                                        <p>Available Seats: <%= event.availableSeats %></p>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" href="booking.ejs?eventId=<%= event._id %>&evName=<%= event.evName %>">Book Now</a>
-                                    </div>
+                                <p class="text-body mb-3">
+                                    <%= event.smallInfo %>
+                                </p>
+                                <div class="d-flex justify-content-between para">
+                                    <p>Available Seats: <%= event.availableSeats %>
+                                    </p>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4"
+                                        href="booking.ejs?eventId=<%= event._id %>&evName=<%= event.evName %>">Book
+                                        Now</a>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <% }); %>
-                    </div> 
-                </div>                
-                
-        
+            </div>
+    </div>
 
- <!-- Footer Start -->
- <div class="container-fluid bg-dark text-light wow fadeIn" data-wow-delay="0.1s" style="height: 150px; align-items: center; justify-content: center; display: flex; flex-direction: column; margin-top: 50px;">
 
-    <div class="container">
-        <div class="copyright">
-            <div class="row" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <div class="col-md-6 text-center mb-3 mb-md-0" style="margin-top: 25px;">
-                    &copy; <a  href="#">museumGo</a>, All Right Reserved.
 
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a href="">Sakshi Patil</a>
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="footer-menu">
-                        <a href="index.ejs">Home</a> |
-                        <a href="contact.ejs">Contact Us</a> |
-                        <a href="booking.ejs">Booking</a>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light wow fadeIn" data-wow-delay="0.1s"
+        style="height: 150px; align-items: center; justify-content: center; display: flex; flex-direction: column; margin-top: 50px;">
+
+        <div class="container">
+            <div class="copyright">
+                <div class="row"
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <div class="col-md-6 text-center mb-3 mb-md-0" style="margin-top: 25px;">
+                        &copy; <a href="#">museumGo</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a href="">Sakshi Patil</a>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="footer-menu">
+                            <a href="index.ejs">Home</a> |
+                            <a href="contact.ejs">Contact Us</a> |
+                            <a href="booking.ejs">Booking</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->

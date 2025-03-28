@@ -36,7 +36,8 @@ const handleIndexPage = async (req, res) => {
 
 const handleBookingPage = async (req, res) => {
     try {
-        const selectedEvent = req.query.evName || ""; // Get selected event from query params
+        const selectedEvent = req.query.evName || "";
+        
         const allEvents = await Event.find({});
         res.render('booking', { cookies: req.cookies, events: allEvents,selectedEvent:selectedEvent });
     } catch (error) {
@@ -120,7 +121,6 @@ const myBooking = async (req, res) => {
 
         // Fetch bookings for the logged-in user using their email
         const bookings = await Booking.find({ email: user.email }).populate('event'); // Populate event details
-
 
         // Render user dashboard with bookings
         res.render('userDashboard', { user: user,bookings: bookings,cookies: req.cookies });
