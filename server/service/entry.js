@@ -1,6 +1,6 @@
 const Staff = require('../models/staff'); 
 const User = require('../models/user'); 
-const Event = require('../models/Event'); 
+const Event = require('../models/event'); 
 const Booking = require('../models/Booking');
 
 async function getTotalStaff() {

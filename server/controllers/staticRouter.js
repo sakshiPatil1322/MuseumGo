@@ -1,4 +1,4 @@
-const Event = require('../models/Event');
+const Event = require('../models/event');
 const { getTotalStaff, getTotalUsers, getTotalEvents } = require('../service/entry');
 const Booking = require('../models/Booking');
 const Staff = require('../models/staff');

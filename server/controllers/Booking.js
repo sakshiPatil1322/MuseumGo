@@ -1,7 +1,7 @@
 const Booking = require('../models/Booking');
 const { v4: uuidv4 } = require('uuid');
 const nodemailer = require('nodemailer'); // Import nodemailer
-const Event = require('../models/Event'); // Ensure the path is correct
+const Event = require('../models/event'); // Ensure the path is correct
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 async function handleBooking(req, res) {

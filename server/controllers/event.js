@@ -1,4 +1,4 @@
-const Event = require('../models/Event');
+const Event = require('../models/event');
 const multer = require('multer');
 
 // Use memory storage to temporarily store the image

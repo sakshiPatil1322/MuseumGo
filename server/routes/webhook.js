@@ -1,7 +1,7 @@
 // routes/webhook.js
 const express = require('express');
 const router = express.Router();
-const Event = require('../models/Event'); // Import your Event model
+const Event = require('../models/event'); // Import your Event model
 
 // Webhook for Dialogflow
 router.post('/', async (req, res) => {
