@@ -23,7 +23,7 @@ const {mongoose} = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 9016;
 
-connectToMongoDB('mongodb://127.0.0.1:27017/ticket')
+connectToMongoDB(process.env.MONGODB_URI)
 .then(()=>console.log("mongoDb connected succesfully..."))
 .catch((error)=>console.log("mongDb can't connect",error));
 
