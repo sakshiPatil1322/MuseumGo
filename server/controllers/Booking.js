@@ -59,8 +59,8 @@ async function handleBooking(req, res) {
                 quantity: tickets,
             }],
             mode: 'payment',
-            success_url: 'http://localhost:9016',
-            cancel_url: 'http://localhost:9016',
+            success_url: 'https://museum-go.vercel.app/',
+            cancel_url: 'https://museum-go.vercel.app/',
         });        
 
         res.redirect(session.url)
