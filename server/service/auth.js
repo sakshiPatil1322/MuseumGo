@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-const secretKey = "jujutsu";
+const secretKey = process.env.JWT_SECRET
 
 
 function setUser(user){
