@@ -134,7 +134,6 @@ const myBooking = async (req, res) => {
 // Handle Cancellation
 const deleteMyBooking =  async (req, res) => {
     const { bookingId } = req.body;
-
     try {
         await Booking.findByIdAndDelete(bookingId);
         res.redirect('/dashboard'); // Refresh dashboard after cancellation
@@ -143,6 +142,26 @@ const deleteMyBooking =  async (req, res) => {
         res.status(500).send('Server Error');
     }
 };
+
+const removeTicketByAdmin = async (req,res) => {
+    const email = req.params.email
+    await Booking.findOneAndDelete({email});
+    res.render('adminWebHandle')
+}
+
+const getUserForValidation = async(req,res) => {
+    const { key } = req.query;  // Use req.query to access GET parameters
+
+    const userInfo = await Booking.findOne({ uniqueKey: key });  // Query using key
+
+    if (userInfo) {
+        // render the page if userInfo is found
+        res.render('conformBooking', { userInfo });
+    } else {
+        // handle case where no userInfo is found
+        res.status(404).send("User not found");
+    }
+}
 
 
 
@@ -159,7 +178,9 @@ module.exports = {
     handleAdminExhibits,
     handleAdminWebHandle,
     myBooking,
-    deleteMyBooking
+    deleteMyBooking,
+    removeTicketByAdmin,
+    getUserForValidation
 };
 
 

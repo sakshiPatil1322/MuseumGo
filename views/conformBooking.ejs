@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        /* Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.1), rgba(255, 204, 0, 0.2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Card Container */
+        .card {
+            background-color: #fff;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ff7f00; /* Orange border */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Title */
+        .card h2 {
+            color: #ff7f00; /* Orange */
+            margin-bottom: 15px;
+        }
+
+        /* Booking Details */
+        .booking-details {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .booking-details p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .booking-details strong {
+            color: #ff7f00; /* Orange for text labels */
+        }
+
+        /* Buttons */
+        .validate-btn, .cancel-btn {
+            background-color: #ff7f00; /* Orange */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .validate-btn:hover, .cancel-btn:hover {
+            background-color: #e67e00; /* Darker orange for hover effect */
+        }
+
+        /* Cancel button styles */
+        .cancel-btn {
+            background-color: #e74c3c; /* Red */
+            margin-top: 10px;
+        }
+
+        .cancel-btn:hover {
+            background-color: #c0392b; /* Darker red for hover effect */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Booking Confirmation</h2>
+
+        <div class="booking-details">
+            <p><strong>Name:</strong> <%= userInfo.name %></p>
+            <p><strong>Email:</strong> <%= userInfo.email %></p>
+            <p><strong>Event:</strong> <%= userInfo.event ? userInfo.event.name : "N/A" %></p>
+            <p><strong>Check-in Date:</strong> <%= userInfo.checkin.toDateString() %></p>
+            <p><strong>Tickets:</strong> <%= userInfo.tickets %></p>
+            <p><strong>Special Request:</strong> <%= userInfo.specialRequest || "None" %></p>
+        </div>
+
+        <!-- Form for Conforming the booking -->
+        <form action="/delete-user/<%= userInfo.email %>" method="POST">
+            <button class="validate-btn" type="submit">Conform</button>
+        </form>
+
+        <!-- Cancel Button -->
+        <form action="/" method="GET">
+            <button class="cancel-btn" type="submit">Cancel</button>
+        </form>
+        
+    </div>
+
+</body>
+
+</html>

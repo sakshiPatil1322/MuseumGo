@@ -194,9 +194,14 @@ const cloudinary = require('cloudinary').v2;
 
 // chatbot secreate Key
 
-vk5yvakkfj7y5wdj4d2d21bbdfhw6158
+vk5yvakkfj7y5wdj4d2d21bbdfhw6158 
 
 
 
+
+<form action="/delete-user" method="POST">
+            <input type="hidden" name="bookingId" value="<%= booking. %>">
+            <button class="btn btn-primary w-100 py-3" type="submit">Conform</button>
+        </form>
 
 

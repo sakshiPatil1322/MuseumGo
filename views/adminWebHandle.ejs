@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -40,7 +42,8 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -51,7 +54,8 @@
         <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.ejs" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="index.ejs"
+                        class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary text-uppercase">MuseumGo</h1>
                     </a>
                 </div>
@@ -81,10 +85,12 @@
                         <a href="index.ejs" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary text-uppercase">MuseumGo</h1>
                         </a>
-                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-between custom-margin head-cls" id="navbarCollapse">
+                        <div class="collapse navbar-collapse justify-content-between custom-margin head-cls"
+                            id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0 mearg">
                                 <a href="adminDashboard" class="nav-item nav-link active">Home</a>
                                 <a href="adminWebHandle" class="nav-item nav-link">MuseumGo</a>
@@ -92,16 +98,19 @@
                                 <a href="adminExhibits" class="nav-item nav-link">Staff</a>
                                 <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft custom-btn">Login</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Signup</a> -->
-                                <a href="/logout" class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Logout</a>
+                                <a href="/logout"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight custom-btn">Logout</a>
                             </div>
-                        </div>        
+                        </div>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Header End -->
         <div class="sec-nav">
-            <p><%= user.email %></p>
+            <p>
+                <%= user.email %>
+            </p>
         </div>
 
         <!-- Page Header Start -->
@@ -120,20 +129,22 @@
         </div>
         <!-- Page Header End -->
 
-        <form method="post" action="/findUser">
-            <div class="cont" style="align-items: center; justify-content: center; display: flex; height: 40vh; border: 2px solid grey;width: 80%;margin-left: 140px;">
-        <div class="col-md-6">
-            <div class="form-floating">
-                <!-- <H1 style="margin-bottom: 25px;">Enter Key Here</H1> -->
-                <input type="text" name="key" class="form-control" id="price" placeholder="Price">
-                <label for="price">Enter Key Here</label>
+        <form method="GET" action="/get-user">
+            <div class="cont"
+                style="align-items: center; justify-content: center; display: flex; height: 40vh; border: 2px solid grey;width: 80%;margin-left: 140px;">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <!-- <H1 style="margin-bottom: 25px;">Enter Key Here</H1> -->
+                        <input type="text" name="key" class="form-control" id="price" placeholder="Price">
+                        <label for="price">Enter Key Here</label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary w-100 py-3" type="submit">Conform</button>
+                <div class="col-md-6" style="margin-left:50px; width: 100px;">
+                </div>
             </div>
-        </div>
-        <div class="col-md-6" style="margin-left:50px; width: 100px;">
-            <button class="btn btn-primary w-100 py-3" type="submit">Conform</button>
-        </div>
-    </div>
-    </form>
+        </form>
 
         <!-- <h1>Events</h1>
         
@@ -141,8 +152,8 @@
         <table>
             <thead>
                 <tr> -->
-                    <!-- <th>Event</th> -->
-                    <!-- <th>Name</th>
+        <!-- <th>Event</th> -->
+        <!-- <th>Name</th>
                     <th>Email</th>
                     <th>Key</th>
                     <th>Tickets</th>
@@ -150,15 +161,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% events.forEach(event => { %>
-                    <tr>
-                        <td><%= event.name %></td>
-                        <td><%= event.email %></td>
-                        <td><%= event.uniqueKey %></td>
-                        <td><%= event.tickets %></td>
-                        <td><%= event.checkin.toDateString() %></td>
-                    </tr>
-                <% }) %>
+                
             </tbody>
         </table>
 
@@ -167,17 +170,19 @@
         </div>
             
         </form> -->
-            
-        
+
+
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light wow fadeIn" data-wow-delay="0.1s" style="height: 150px; align-items: center; justify-content: center; display: flex; flex-direction: column; margin-top: 50px;">
+        <div class="container-fluid bg-dark text-light wow fadeIn" data-wow-delay="0.1s"
+            style="height: 150px; align-items: center; justify-content: center; display: flex; flex-direction: column; margin-top: 50px;">
 
             <div class="container">
                 <div class="copyright">
-                    <div class="row" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <div class="row"
+                        style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                         <div class="col-md-6 text-center mb-3 mb-md-0" style="margin-top: 25px;">
-                            &copy; <a  href="#">museumGo</a>, All Right Reserved.
+                            &copy; <a href="#">museumGo</a>, All Right Reserved.
 
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="">Sakshi Patil</a>

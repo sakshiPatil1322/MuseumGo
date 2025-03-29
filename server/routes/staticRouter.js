@@ -1,7 +1,7 @@
 const express = require('express');
 const { isAdmin } = require('../middlewares/auth')
 const { restrictToLoggedinUserOnly } = require('../middlewares/auth');
-const {  myBooking,deleteMyBooking,handleIndexPage,handleBookingPage,handleContactPage,handleServicePage,handleAdminDashboard,handleAdminBooking,handleAdminExhibits,handleSignupPage,handleLoginPage,handleAdminWebHandle} = require('../controllers/staticRouter');
+const { getUserForValidation, removeTicketByAdmin,myBooking,deleteMyBooking,handleIndexPage,handleBookingPage,handleContactPage,handleServicePage,handleAdminDashboard,handleAdminBooking,handleAdminExhibits,handleSignupPage,handleLoginPage,handleAdminWebHandle} = require('../controllers/staticRouter');
 router = express.Router();
 
 router.get('/',handleIndexPage);
@@ -22,6 +22,10 @@ router.get('/pay',(req,res)=>{
 router.get('/dashboard', restrictToLoggedinUserOnly, myBooking);
 
 // Handle Cancellation
-router.post('/cancel-booking', restrictToLoggedinUserOnly, deleteMyBooking);
+router.post('/cancel-booking', deleteMyBooking);
+
+router.post('/delete-user/:email',removeTicketByAdmin);
+
+router.get('/get-user',getUserForValidation)
 
 module.exports = router;
